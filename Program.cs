@@ -1,4 +1,6 @@
-﻿using System;
+﻿//algorytm genetyczny 3 (XOR) | Jacek Domeracki | numer albumu: 173518
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -375,7 +377,7 @@ namespace Zadanie_3
 
             Dictionary<int, double> Przedzial_dyskretny = new Dictionary<int, double>();
             Dyskretyzacja_przedzialu(Przedzial_dyskretny, PRZEDZ_MIN, PRZEDZ_MAX, ILE_CHROM_NP);
-            TEST_1("Dyskretyzacja:", Przedzial_dyskretny);
+            //TEST_1("Dyskretyzacja:", Przedzial_dyskretny);
 
             Dictionary<Wej_ProbkaTyp, double> Probki_funkcji_xor = new Dictionary<Wej_ProbkaTyp, double>
             {
@@ -384,7 +386,7 @@ namespace Zadanie_3
                 { (1, 0), 1 },
                 { (1, 1), 0 }
             };
-            TEST_1("Próbki funkcji xor:", Probki_funkcji_xor);
+            //TEST_1("Próbki funkcji xor:", Probki_funkcji_xor);
 
             Osobnik[] pula_osobnikow = new Osobnik[ILE_OSOB];
             Osobnik[] nowa_pula_osobnikow = new Osobnik[ILE_OSOB];
@@ -400,7 +402,7 @@ namespace Zadanie_3
 
                 nowa_pula_osobnikow[i] = new Osobnik(SCHEMAT_SIECI_NEURONOWEJ, ILE_CHROM_NP);
             }
-            TEST_2("Pula osobników:", pula_osobnikow, Przedzial_dyskretny);
+            //TEST_2("Pula osobników:", pula_osobnikow, Przedzial_dyskretny);
 
             //TEST_3("Operatory genetyczne:", pula_osobnikow, ref osobnik_rob_1, ref osobnik_rob_2, Przedzial_dyskretny, Probki_funkcji_xor);
 
